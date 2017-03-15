@@ -17,4 +17,13 @@
                )
 end
 
+n = 2
+while n <= 101
+  Blog.create(
+    title: "あああ",
+    content: "あああ",
+    user_id: n
+  )
+  n = n + 1
+end
 
