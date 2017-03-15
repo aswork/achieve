@@ -31,10 +31,10 @@ development:
   
 production:
  <<: *default
- adapter: pg
+ adapter: postgresql
  encoding: unicode
  pool: 5
- database: db/production.pg
+ database: achieve_production
  username: achieve
  password: <%= ENV['ACHIEVE_DATABASE_PASSWORD'] %>
 
