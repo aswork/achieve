@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-
+gem 'sqlite3', groups: %w(test development), require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
-gem 'sqlite3', groups: %w(test development), require: false
 gem 'pg', groups: %w(production), require: false
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -37,6 +36,15 @@ gem 'devise'
 
 gem 'faker'
 
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring'
+
+
+gem 'twitter-bootstrap-rails'
+
+gem "jquery-turbolinks"
+
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,12 +56,3 @@ group :development, :test do
 
 end
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring'
-
-
-gem 'twitter-bootstrap-rails'
-
-gem "jquery-turbolinks"
-
-gem 'rails_12factor', group: :production

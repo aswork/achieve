@@ -15,17 +15,28 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
-  template: template0
+ adapter: postgresql
+ encoding: unicode
+ # For details on connection pooling, see rails configuration guide
+ # http://guides.rubyonrails.org/configuring.html#database-pooling
+ pool: 5
+ template: template0
 
 
 development:
-  <<: *default
-  database: achieve_development
+ <<: *default
+ adapter: postgresql
+ database: achieve_development
+  
+  
+production:
+ <<: *default
+ adapter: pg
+ encoding: unicode
+ pool: 5
+ database: db/production.pg
+ username: achieve
+ password: <%= ENV['ACHIEVE_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,8 +69,9 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: achieve_test
+ <<: *default
+ adapter: postgresql
+ database: achieve_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,8 +92,4 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: achieve_production
-  username: achieve
-  password: <%= ENV['ACHIEVE_DATABASE_PASSWORD'] %>
+
