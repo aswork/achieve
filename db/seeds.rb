@@ -17,12 +17,4 @@
                )
 end
 
-n = 403
-while n <= 503
-  Blog.create(
-    title: "あああ",
-    content: "あああ",
-    user_id: n
-  )
-  n = n + 1
-end
+
