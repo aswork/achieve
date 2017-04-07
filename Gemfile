@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'rails_admin'
 
 group :development do
   gem 'letter_opener_web'
