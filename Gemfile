@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'rails_admin'
 
+gem 'cancan'
+
 group :development do
   gem 'letter_opener_web'
 end
@@ -57,6 +59,6 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'pry-rails'
 
 end
