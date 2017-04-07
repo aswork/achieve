@@ -19,7 +19,7 @@ config.action_controller.perform_caching = true
   # For large-scale production use, consider using a caching reverse proxy like
   # NGINX, varnish or squid.
   # config.action_dispatch.rack_cache = true
-config.action_mailer.default_url_options = { host:"infinite-plateau-79445.herokuapp.com"}
+config.action_mailer.default_url_options = { host:"desolate-cove-10060.herokuapp.com"}
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {
