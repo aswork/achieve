@@ -9,6 +9,7 @@ end
     def show
       @comment = @blog.comments.build
       @comments = @blog.comments
+      Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
     end
 
   def new

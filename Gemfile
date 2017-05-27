@@ -21,6 +21,8 @@ gem 'omniauth-facebook'
 gem 'carrierwave'
 gem 'rmagick'
 
+gem 'pusher'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -37,6 +39,7 @@ gem 'rails_admin'
 gem 'cancan'
 
 gem 'activeresource'
+
 
 group :development do
   gem 'letter_opener_web'
