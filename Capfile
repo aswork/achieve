@@ -15,8 +15,7 @@ require "capistrano/deploy"
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 
-require 'capistrano/setup'
-require 'capistrano/deploy'
+
 # require 'capistrano/rvm'
 require 'capistrano/rbenv'
 # require 'capistrano/chruby'
